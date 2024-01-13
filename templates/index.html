@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pod Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: {{ background_color|default('#fff') }};
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Set the height to 100% of the viewport height */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Pod Information</h1>
+    <p><strong>Hostname:</strong> {{ info.hostname }}</p>
+    <p><strong>IP:</strong> {{ info.ip }}</p>
+    <p><strong>Namespace:</strong> {{ info.namespace }}</p>
+    <p><strong>URI:</strong> {{ info.uri }}</p>
+    <p><strong>Method:</strong> {{ info.method }}</p>
+    <p><strong>RemoteAddr:</strong> {{ info.remote_addr }}</p>
+</div>
+</body>
+</html>
