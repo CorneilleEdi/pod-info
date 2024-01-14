@@ -33,4 +33,4 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{VERSION}}
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
