@@ -15,7 +15,7 @@ spec:
       serviceAccountName: pod-info-service-account
       containers:
         - name: pod-info
-          image: loopbin/pod-info:2.0.0
+          image: ghcr.io/corneilleedi/pod-info:2.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
