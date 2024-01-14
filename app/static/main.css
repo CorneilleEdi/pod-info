@@ -1,7 +1,6 @@
 
 .container {
     max-width: 600px;
-    background-color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
@@ -15,4 +14,12 @@ h1 {
 p {
     margin: 5px 0;
     color: #555;
+}
+
+#error-banner {
+    background-color: #ffcccc;
+    border: 1px solid #ff6666;
+    color: #ff0000;
+    padding: 10px;
+    margin-bottom: 20px;
 }

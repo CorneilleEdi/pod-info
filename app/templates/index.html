@@ -20,13 +20,20 @@
 </head>
 <body>
 <div class="container">
+
+    {% if error_message %}
+        <div id="error-banner">
+            <p><strong>Error:</strong> {{ error_message }}</p>
+            <p>Please check if the pod is running in a kubernetes pod.</p>
+        </div>
+    {% endif %}
+
     <h1>Pod Information</h1>
-    <p><strong>Hostname:</strong> {{ info.hostname }}</p>
-    <p><strong>IP:</strong> {{ info.ip }}</p>
-    <p><strong>Namespace:</strong> {{ info.namespace }}</p>
-    <p><strong>URI:</strong> {{ info.uri }}</p>
-    <p><strong>Method:</strong> {{ info.method }}</p>
-    <p><strong>RemoteAddr:</strong> {{ info.remote_addr }}</p>
+    <p><strong>Node Name:</strong> {{ podInfo.nodeName }}</p>
+    <p><strong>Pod Name:</strong> {{ podInfo.podName }}</p>
+    <p><strong>Namespace:</strong> {{ podInfo.namespace }}</p>
+    <p><strong>Status:</strong> {{ podInfo.status }}</p>
+    <p><strong>Pod IP:</strong> {{ podInfo.pod_ip }}</p>
 </div>
 </body>
 </html>
