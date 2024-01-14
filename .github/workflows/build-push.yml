@@ -5,9 +5,8 @@ on:
     branches: ['main']
 
 env:
-  USERNAME: corneilleedi
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: "corneilleedi/pod-info"
   VERSION: 1.0.0
 
 jobs:
@@ -25,7 +24,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ env.USERNAME }}
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
