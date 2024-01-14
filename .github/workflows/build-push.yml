@@ -2,7 +2,7 @@ name: build and push
 
 on:
   push:
-    branches: ['main']
+    branches: [ 'main' ]
 
 env:
   REGISTRY: ghcr.io
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./app
           push: true
-          file: ./Dockerfile
+          file: ./app/Dockerfile
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
